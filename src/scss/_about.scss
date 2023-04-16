@@ -1,0 +1,124 @@
+.aboutCard {
+    .card {
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .card-title {
+            margin: 20px 0px 20px 0px;
+
+            h1 {
+                color: $lightBlue;
+                border-bottom: 2px solid;
+                width: 9rem;
+                text-align: center;
+
+            }
+        }
+
+        .pic-col {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 15rem;
+                border-radius: 50%;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+        }
+
+
+        .aboutMeCol {
+            margin-top: 1rem;
+            width: 80%;
+            text-align: center;
+
+            .aboutName {
+                color: $lightBlue;
+            }
+
+
+            p {
+                line-height: 2;
+                font-size: 500;
+                letter-spacing: 2;
+
+                .specailWord {
+                    color: $lightBlue;
+                    font-size: 700;
+
+                }
+
+            }
+
+            .aboutIcons {
+                width: 10%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 3rem;
+
+                img {
+                    width: 40px;
+                    margin: auto;
+
+                    &:hover {
+                        background-color: $primary;
+                        border-radius: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.skillBg {
+
+    margin-top: 7rem;
+    padding: 0 0 50px 0;
+    position: relative;
+    color: $lightBlue;
+    overflow: hidden;
+
+    .skillBox {
+        width: 100%;
+        height: 23rem;
+        background-color: $primary;
+        border-radius: 64px;
+        text-align: center;
+        // padding: 50px 50px;
+
+        .skillTitle {
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                margin-top: 3rem;
+                text-align: center;
+                color: $lightBlue;
+                border-bottom: 2px solid;
+                width: 8rem;
+            }
+        }
+
+        h5 {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .skillSlider {
+            width: 80%;
+            margin: auto;
+            position: relative;
+            display: flex;
+
+        }
+    }
+}

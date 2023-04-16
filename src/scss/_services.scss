@@ -1,0 +1,103 @@
+.sericCol {
+
+    .serviceHadding {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            margin-top: 2rem;
+            color: $lightBlue;
+            border-bottom: 2px solid;
+            text-align: center;
+            width: 11rem;
+
+        }
+
+    }
+
+    .service_P {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            color: $darkClr;
+            line-height: 1.5;
+            margin: 0.5rem;
+            width: 50%;
+            text-align: center;
+            margin-bottom: 0%;
+
+        }
+    }
+
+}
+
+// Service Card Stylling
+
+.serviceCard {
+    .card {
+        height: 22rem;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        transition: 0.5s ease-in-out;
+        padding: 5px;
+
+        &:hover {
+            border: 1px solid $lightBlue;
+
+        }
+
+
+        .iconDiv {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            width: 5rem;
+            border: 5px solid $lightBlue;
+            border-radius: 50%;
+
+
+            i {
+                // margin-top: 1.5rem;
+                font-size: 3rem;
+            }
+        }
+
+        h5 {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $darkClr;
+
+        }
+
+
+
+        p {
+            color: $darkClr;
+
+            margin-top: 0.6rem;
+            margin-bottom: 2rem;
+        }
+
+        &:hover {
+
+            .iconDiv {
+                background-color: $lightBlue;
+                transition: 0.5s ease-in-out;
+                border: 5px solid $light;
+
+            }
+
+            i {
+                color: #ffff;
+
+            }
+        }
+
+    }
+}

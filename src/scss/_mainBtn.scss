@@ -1,0 +1,39 @@
+.downloadBtn {
+
+
+    a,
+    button {
+        list-style-type: none;
+        text-decoration: none;
+        border: 2px solid $primary;
+        background-color: $primary;
+        color: $lightBlue !important;
+        margin-left: 10px;
+        padding: 11px 10px;
+        border-radius: 5px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        overflow: hidden;
+        font-weight: 500;
+        transition: 0.5s;
+        letter-spacing: 1px;
+        border: 2px solid $lightBlue;
+        display: inline-block;
+
+        &:hover {
+            background-color: $lightBlue;
+            color: $primary !important;
+            // transform: translateY(-2px);
+
+
+        }
+
+        &::after {
+            transform: translateY(0px);
+
+        }
+    }
+
+
+
+}

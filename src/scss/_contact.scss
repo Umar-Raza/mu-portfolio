@@ -1,0 +1,50 @@
+.contactBg {
+    margin-top: 6rem;
+    width: 100%;
+    height: 50rem;
+    background: $primary;
+
+    // .cardDiv {
+    //     margin: auto;
+
+    .card {
+        margin-top: 5rem !important;
+        height: auto;
+        // width: 70%;
+        margin: 0 auto;
+
+        .contactHadding {
+            margin-right: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $lightBlue;
+
+            h1 {
+                text-align: center;
+                margin-top: 3rem;
+                width: 12rem;
+                border-bottom: 2px solid $lightBlue;
+                margin-right: 3px;
+            }
+        }
+
+        .conatacDiv {
+            margin: 0 auto;
+            width: 80%;
+
+            .form-floating {
+                margin-top: 2rem;
+            }
+        }
+
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+        .card {
+            width: 70%;
+        }
+    }
+
+}

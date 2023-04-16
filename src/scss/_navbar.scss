@@ -1,0 +1,99 @@
+nav {
+    background-color: $primary;
+}
+
+.nav-img {
+    width: 5rem;
+}
+
+
+// .navbar {
+//     background-color: $primary;
+// }
+
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+    color: $lightBlue;
+    // text-decoration: none;
+}
+
+.nav-link {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s;
+}
+
+@media only screen and (min-width: 1000px) {
+    .nav-link {
+        position: relative;
+        display: block;
+        padding: 16px 0;
+        margin: 0 12px;
+        letter-spacing: 1px;
+        // font-size: 12px;
+        // line-height: 16px;
+        // font-weight: 900;
+        // text-transform: uppercase;
+        transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
+        color: $lightBlue;
+    }
+
+    .nav-link:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: $lightBlue;
+        transform-origin: right top;
+        transform: scale(0, 1);
+        transition: color 0.1s, transform 0.2s ease-out;
+    }
+}
+
+.nav-link:hover:before,
+a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+
+.nav-hireMe {
+    border: 2px solid white;
+    list-style-type: none;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 4px 5px;
+    overflow: hidden;
+    color: $lightBlue;
+}
+
+.nav-hireMe {
+    list-style-type: none;
+    text-decoration: none;
+    background-color: $lightBlue;
+    color: $primary;
+    padding: 6px 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    letter-spacing: 1px;
+    border: 1px solid $lightBlue;
+
+
+
+    &:hover {
+        color: $primary;
+        background-color: #2d83a0;
+
+        &::after {
+            transform: translateY(0);
+        }
+    }
+
+
+}
