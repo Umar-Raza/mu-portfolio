@@ -1,98 +1,36 @@
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
-import React, { useState } from 'react'
-import { firestore } from '../../config/firebase'
-import '../../config/global'
-
-
-
-const initialState = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  subject: "",
-  massage: ""
-}
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { useForm } from "react-hook-form";
+import '../../config/global';
 
 export default function Contact() {
-  const [state, setState] = useState(initialState)
+
   const [isProcessing, setIsProcessing] = useState(false)
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-
-
-
-
-
-
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    // {/*long code*/ }
-    // // setState((previousState) => ({ ...previousState, [name]: value }))
-
-    // {/*short code*/ }
-    setState(s => ({ ...s, [name]: value }))
-
-  }
-
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-
-    let { firstName, lastName, email, subject, massage } = state
-
-    firstName = firstName.trim()
-    lastName = lastName.trim()
-    subject = subject.trim()
-    massage = massage.trim()
-
-    if (firstName.length < 3) {
-      return window.toastify("Please enter your First name correctly", "error")
-    }
-
-    if (lastName.length < 3) {
-      return window.toastify("Please enter your Last name correctly", "error")
-    }
-
-    if (!window.isEmail(email)) {
-      return window.toastify("Please enter your email correctly", "error")
-    }
-
-    if (subject.length < 3) {
-      return window.toastify("Please enter your Subject correctly", "error")
-    }
-
-    if (massage.length < 10) {
-      return window.toastify("Please enter your massage correctly", "error")
-    }
-
-    console.log(firstName, lastName, email, subject, massage);
-
-    let formData = {
-      firstName, lastName, email, subject, massage,
-      id: window.getRandomId(),
-      dateCreated: serverTimestamp(),
-    }
-
-
+  const sendMessage = (formData) => {
     setIsProcessing(true)
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAIL_serviceId,
+        process.env.REACT_APP_EMAIL_tamplateId,
+        formData,
+        process.env.REACT_APP_EMAIL_publicId
+      )
+      .then((result) => {
+        setIsProcessing(false)
+        window.toastify("Your message successfully send", "success")
+        reset();
 
-    try {
-      const docRef = await addDoc(collection(firestore, "masages"), formData);
-      setState(initialState)
-      window.toastify("Your massage has been successfully send", "success")
-      console.log("Document written with ID: ", docRef.id);
-    } catch (e) {
-      console.error("Error adding document: ", e);
-      window.toastify("Somothing went wrong while sanding massage", "error")
-
-    }
-    setIsProcessing(false)
+      }, (error) => {
+        setIsProcessing(false)
+        window.toastify("Something went wrong while sending , Message.", "error")
+      });
   }
-
   return (
     <>
       <div className="contactBg">
-        <div className="container">
+        <div className="container" id='contact'>
           <div className="row">
             <div className="col-12 col-md-12">
               <div className="card">
@@ -102,40 +40,54 @@ export default function Contact() {
                 <div className="row">
                   <div className="col-12">
                     <div className="conatacDiv">
-                      <form onSubmit={handleSubmit}>
+                      <form onSubmit={handleSubmit(sendMessage)}>
                         <div className="row">
                           <div className="col-12 col-md-6" >
-                            <div className="form-floating" >
-                              <input type="text" className="form-control " placeholder="First Name" name='firstName' value={state.firstName} onChange={handleChange} />
+                            <div className="form-floating " >
+                              <input type="text" className="form-control" placeholder="First Name" name='firstName'    {...register('firstName', { required: true, minLength: 3, maxLength: 10 })} />
+                              {errors.firstName?.type === 'required' && <p className='error-msg' role="alert"> First name is required</p>}
+                              {errors.firstName?.type === 'minLength' && <p className='error-msg' role="alert">Minimum lenght is 3.</p>}
+                              {errors.firstName?.type === 'maxLength' && <p className='error-msg' role="alert">Maximum lenght is 10.</p>}
                               <label>First Name*</label>
                             </div>
                           </div>
                           <div className="col-12 col-md-6">
-                            <div className="form-floating">
-                              <input type="text" className="form-control " id="floatingInput" placeholder="Last Name" name='lastName' value={state.lastName} onChange={handleChange} />
-                              <label >Last Name*</label>
+                            <div className="form-floating ">
+                              <input type="text" className="form-control " id="floatingInput" placeholder="Last Name" name='lastName' {...register('lastName', { required: true, minLength: 3, maxLength: 10 })} />
+                              {errors.lastName?.type === 'required' && <p className='error-msg' role="alert">Last name is required</p>}
+                              {errors.lastName?.type === 'minLength' && <p className='error-msg' role="alert">Minimum lenght is 3.</p>}
+                              {errors.lastName?.type === 'maxLength' && <p className='error-msg' role="alert">Maximum lenght is 10.</p>}
+                              <label>Last Name*</label>
                             </div>
                           </div>
                           <div className="col-12 col-md-6">
-                            <div className="form-floating">
-                              <input type="email" className="form-control " id="floatingInput" placeholder="name@example.com" name='email' value={state.email} onChange={handleChange} />
+                            <div className="form-floating ">
+                              <input type="email" className="form-control " id="floatingInput" placeholder="name@example.com" name='email' {...register('email', { required: true, pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ })} />
+                              {errors.email?.type === 'required' && <p className='error-msg' role="alert">Email is required.</p>}
+                              {errors.email?.type === 'pattern' && <p className='error-msg' role="alert">Invalid email.</p>}
                               <label >Email address*</label>
                             </div>
                           </div>
                           <div className="col-12 col-md-6">
-                            <div className="form-floating">
-                              <input type="text" className="form-control " placeholder="Subject" name='subject' value={state.subject} onChange={handleChange} />
+                            <div className="form-floating ">
+                              <input type="text" className="form-control " placeholder="Subject" name='subject' {...register('subject', { required: true, minLength: 3, maxLength: 15 })} />
+                              {errors.subject?.type === 'required' && <p className='error-msg' role="alert">Subject is required.</p>}
+                              {errors.subject?.type === 'minLength' && <p className='error-msg' role="alert">Minimum lenght is 3.</p>}
+                              {errors.subject?.type === 'maxLength' && <p className='error-msg' role="alert">Maximum Length is 15.</p>}
                               <label>Subject*</label>
                             </div>
                           </div>
                           <div className="col-12">
-                            <div className="form-floating">
-                              <textarea className="form-control " placeholder="Leave a massage here" id="floatingTextarea2" name='massage' value={state.massage} onChange={handleChange} ></textarea>
+                            <div className="form-floating ">
+                              <textarea className="form-control " style={{ height: "6rem" }} placeholder="Leave a massage here" id="floatingTextarea2" name='message' {...register('message', { required: true, minLength: 15, maxLength: 300 })}></textarea>
+                              {errors.message?.type === 'required' && <p className='error-msg' role="alert">Message is required</p>}
+                              {errors.message?.type === 'minLength' && <p className='error-msg' role="alert">Minimum lenght is 15.</p>}
+                              {errors.message?.type === 'maxLength' && <p className='error-msg' role="alert">Maximum lenght is 300.</p>}
                               <label>Message*</label>
                             </div>
                           </div>
                           <div className='col-12 col-md-6  offset-md-4 downloadBtn mt-4 mb-5 '>
-                            <button className=' w-50' disabled={isProcessing}>
+                            <button className='  w-50' type='submit' value="SEND MESSAGE" disabled={isProcessing}>
                               {!isProcessing
                                 ? <span>Submit <i className="bi bi-send p-2"></i></span>
                                 : <div className='spinner spinner-grow spinner-grow-sm'></div>
@@ -146,10 +98,8 @@ export default function Contact() {
                       </form>
                     </div>
                   </div>
-
                 </div>
               </div>
-
             </div>
           </div>
         </div>

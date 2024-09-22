@@ -1,4 +1,3 @@
-
 import projectOne from '../../assets/imgs/ProjectOne.png'
 import projectTwo from '../../assets/imgs/ProjectTwo.png'
 import projectThree from '../../assets/imgs/projectThree.png'
@@ -20,7 +19,7 @@ const ProjectData = [
         img: projectThree,
         hadding: "Web Design and Development",
         webLink: "https://coconut-firebase-9e870.web.app/",
-        paragaraph: 'Demo web App with Register & Dashboard pages build on React.js Goggle Fireabase.'
+        paragaraph: 'Demo web App with Register & Dashboard pages build on react.'
     },
 
 ]

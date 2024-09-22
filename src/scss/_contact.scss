@@ -1,16 +1,12 @@
 .contactBg {
     margin-top: 6rem;
     width: 100%;
-    height: 50rem;
+    height: auto;
     background: $primary;
-
-    // .cardDiv {
-    //     margin: auto;
 
     .card {
         margin-top: 5rem !important;
         height: auto;
-        // width: 70%;
         margin: 0 auto;
 
         .contactHadding {
@@ -35,8 +31,16 @@
 
             .form-floating {
                 margin-top: 2rem;
+
+                .error-msg{
+                    margin: 0;
+                    padding: 0%;
+                    color: red;
+                }
             }
         }
+
+
 
     }
 

@@ -1,6 +1,4 @@
 .downloadBtn {
-
-
     a,
     button {
         list-style-type: none;
@@ -23,9 +21,6 @@
         &:hover {
             background-color: $lightBlue;
             color: $primary !important;
-            // transform: translateY(-2px);
-
-
         }
 
         &::after {
@@ -33,7 +28,5 @@
 
         }
     }
-
-
 
 }

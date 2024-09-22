@@ -1,8 +1,8 @@
 import React from 'react'
 // Crarousel
-import Carousel from 'react-multi-carousel';
-// Icons
 import AboutPic from '../../assets/imgs/AboutPic.jpg'
+import Carousel from 'react-multi-carousel';
+// I cons
 import GmailIcon from '../../assets/icons/gmail.png'
 import call from '../../assets/icons/call.png'
 import whatsApp from '../../assets/icons/whatsApp.jpg'
@@ -12,7 +12,6 @@ import SkillProgress from '../../components/skillProgress/SkillProgress'
 //Get Botton  component 
 import MianBtn from '../../components/buttons/mainBtn/MainBtn'
 import Resume from '../../assets/imgs/Resume.pdf'
-
 
 export default function About() {
 
@@ -37,14 +36,13 @@ export default function About() {
 
   return (
 
-    <div className="container">
+    <div className="container" id='about'>
       <div className="row">
         <div className="aboutCard">
           <div className="card">
             <div className="card-title">
               <h1 >ABOUT</h1>
             </div>
-            {/* <div className="col-width"> */}
             <div className="col-12 col-sm-12   pic-col  w-50">
               <img src={AboutPic} alt='pic' />
             </div>
@@ -63,10 +61,7 @@ export default function About() {
                 />
               </div>
               <div className='aboutIcons mt-4 '>
-                <a href="mailto:chintoraza279@gmail.com"><img className='Icon' src={GmailIcon} alt="Gmail" /></a>
-                <a href="tel:03107029087"><img className='Icon' src={call} alt="Call" style={{ marginLeft: "8px", marginRight: "8px" }} /></a>
-                <a href="https://wa.me/03107029087"><img className='Icon' src={whatsApp} alt="WhatsApp" style={{ marginRight: "8px", }} /></a>
-                <a href="https://github.com/Umar-Raza"><img className='Icon' src={github} alt="Githup" /></a>
+
               </div>
 
             </div>
@@ -80,7 +75,11 @@ export default function About() {
                 <div className="skillTitle">
                   <h1 className=''>SKILLS</h1>
                 </div>
-                <Carousel responsive={responsive} infinite={true} className='skillSlider' >
+                <Carousel responsive={responsive}
+                  infinite={true}
+                  autoPlay={true}
+                  removeArrowOnDeviceType={["tablet", "mobile"]}
+                  className='skillSlider mt-2' >
                   <div>
                     <SkillProgress
                       percentage={95}
@@ -104,14 +103,14 @@ export default function About() {
                   </div>
                   <div>
                     <SkillProgress
-                      percentage={95}
+                      percentage={85}
                       percentageText={"95%"}
                     />
                     <h6>Bootstrap 5</h6>
                   </div>
                   <div>
                     <SkillProgress
-                      percentage={85}
+                      percentage={80}
                       percentageText={"90%"}
                     />
                     <h6>React.js</h6>
@@ -144,12 +143,5 @@ export default function About() {
         </div >
       </div>
     </div>
-
-
-
-
   )
 }
-
-
-

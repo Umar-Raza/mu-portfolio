@@ -11,9 +11,8 @@
             border-bottom: 2px solid;
             text-align: center;
             width: 11rem;
-
         }
-
+        
     }
 
     .service_P {
@@ -30,9 +29,19 @@
             margin-bottom: 0%;
 
         }
+
+    }
+
+    @media only screen and (max-width: 770px) {
+        .service_P {
+            p {
+                width: 100%;
+            }
+        }
     }
 
 }
+
 
 // Service Card Stylling
 
@@ -63,7 +72,6 @@
 
 
             i {
-                // margin-top: 1.5rem;
                 font-size: 3rem;
             }
         }
@@ -74,8 +82,6 @@
             color: $darkClr;
 
         }
-
-
 
         p {
             color: $darkClr;
@@ -100,4 +106,5 @@
         }
 
     }
+
 }

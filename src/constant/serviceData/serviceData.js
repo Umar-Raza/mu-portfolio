@@ -7,7 +7,7 @@ const ServiceData = [
     },
     {
         icon: "bi bi-phone",
-        title: "Mobikle App Design",
+        title: "Mobile App Design",
         paragraph: "I'm proficient in interface design of mobile applications (Android and iOS). I've extensive portfolio of interface design.You will be able to benefit from this service after a few days."
     },
     {

@@ -13,7 +13,6 @@
 
     .type-p {
         color: #6c757d;
-        // color: #bac1c4;
         font-size: 25px;
         margin-top: 1px;
         font-weight: 500;
@@ -25,7 +24,6 @@
 
 .home-lottie {
     margin-top: 4rem;
-    // margin-bottom: 3rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -44,22 +42,18 @@
         }
     }
 
-    // .home-lottie {
-    //     margin-top: 3rem;
-
-    // }
 
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 990px) {
 
     .home-lottie {
 
         img {
             align-items: center;
             justify-content: center;
-            width: 80%;
+            width: 100%;
         }
 
     }

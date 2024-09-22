@@ -3,7 +3,7 @@ import ServicCard from '../../components/serviceCard/ServiceCard'
 import ServiceData from '../../constant/serviceData/serviceData'
 export default function Services() {
   return (
-    <div className="container">
+    <div className="container" id='services'>
       <div className="row">
         <div className="col sericCol">
           <div className="serviceHadding">
@@ -29,7 +29,6 @@ export default function Services() {
           </div>
         </div>
       </div>
-
     </div>
 
   )
