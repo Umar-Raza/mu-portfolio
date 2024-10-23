@@ -35,7 +35,6 @@ export default function About() {
   };
 
   return (
-
     <div className="container" id='about'>
       <div className="row">
         <div className="aboutCard">
@@ -61,9 +60,11 @@ export default function About() {
                 />
               </div>
               <div className='aboutIcons mt-4 '>
-
+                <a href="mailto:umardev92@gmail.com"><img className='Icon' src={GmailIcon} alt="Gmail" /></a>
+                <a href="tel:03107029087"><img className='Icon' src={call} alt="Call" style={{ marginLeft: "8px", marginRight: "8px" }} /></a>
+                <a href="https://wa.me/+923107029087" target='_blank' rel="noreferrer"><img className='Icon' src={whatsApp} alt="WhatsApp" style={{ marginRight: "8px", }} /></a>
+                <a href="https://github.com/Umar-Raza" target='_blank' rel="noreferrer"><img className='Icon' src={github} alt="Githup" /></a>
               </div>
-
             </div>
           </div>
         </div>
@@ -107,6 +108,13 @@ export default function About() {
                       percentageText={"95%"}
                     />
                     <h6>Bootstrap 5</h6>
+                  </div>
+                  <div>
+                    <SkillProgress
+                      percentage={85}
+                      percentageText={"95%"}
+                    />
+                    <h6>Tailwinds</h6>
                   </div>
                   <div>
                     <SkillProgress
