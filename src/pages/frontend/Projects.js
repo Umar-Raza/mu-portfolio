@@ -19,7 +19,7 @@ export default function Projects() {
                     img={items.img}
                     hadding={items.hadding}
                     webLink={items.webLink}
-                    paragaraph={items.paragaraph}
+                    paragaraph={items.paragraph}
                   />
                 })
                 }

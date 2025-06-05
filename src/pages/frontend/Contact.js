@@ -87,7 +87,7 @@ export default function Contact() {
                             </div>
                           </div>
                           <div className='col-12 col-md-6  offset-md-4 downloadBtn mt-4 mb-5 '>
-                            <button className='  w-50' type='submit' value="SEND MESSAGE" disabled={isProcessing}>
+                            <button className='w-50' type='submit' value="SEND MESSAGE" disabled={isProcessing}>
                               {!isProcessing
                                 ? <span>Submit <i className="bi bi-send p-2"></i></span>
                                 : <div className='spinner spinner-grow spinner-grow-sm'></div>
