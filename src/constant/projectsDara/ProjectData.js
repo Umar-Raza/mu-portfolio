@@ -29,7 +29,7 @@ const ProjectData = [
         img: projectFour,
         hadding: "Noor AlIslam Academy",
         webLink: "https://noor-alislam-edu.web.app/",
-        paragraph: 'A beautiful academy web app.I build this web app using React.js & Goggle Firebase.'
+        paragraph: 'Noor Al-Islam is a web app that provides online Quran learning with expert teachers.'
     },
     {
         img: projectFive,
