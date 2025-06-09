@@ -1,71 +1,70 @@
-# Getting Started with Create React App
+# My Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio website: **[mu‑portfolio.web.app](https://mu‑portfolio.web.app)**
 
-## Available Scripts
+This site highlights my skills, projects, and experiences. Built with modern web technologies and deployed on Firebase Hosting, it's designed to be responsive, interactive, and visually engaging.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Explore it live at: [https://mu‑portfolio.web.app](https://mu‑portfolio.web.app)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 💻 Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Framework**: React js.  
+- **Styling**: e.g., Bootstrap, SASS.  
+- **Animations**: e.g., lottie animation, CSS transitions  
+- **Deployment**: Firebase Hosting (hosted at `mu‑portfolio.web.app`)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+├── public/ # Static assets (favicon, index.html)
+├── src/ # Source code
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Portfolio pages (Home, About, Projects)
+│ ├── assets/ # Images, icons, logos
+│ ├── styles/ # Style definitions (CSS/SASS/Tailwind)
+│ └── index.js # Entry point
+├── .firebaserc # Firebase project settings
+├── firebase.json # Hosting config
+├── package.json # Project metadata & dependencies
+└── README.md # This file
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🔧 Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Responsive Design** – Looks great across desktop, tablet, and mobile
+- **Interactive UI** – Smooth scrolling, hover effects, scroll-triggered animations
+- **Project Showcase** – Detailed galleries for each project including descriptions, tech stack, and links
+- **Contact Form** – A simple form powered by Firebase Functions / EmailJS
+- **SEO Optimized** – Proper meta tags, sitemap, and structured data
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📚 Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Tech             | Purpose                     |
+| ------------     | --------------------------- |
+| React            | UI framework                |
+| Bootstrap        | Utility-first styling       |
+| Firebase         | Hosting & backend services  |
+| EmailJS          | Contact form email handling |
+| lottie animation | Animations                  |
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##🤝 Connect with Me
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Website:** mu‑portfolio.web.app
 
-### Code Splitting
+- **GitHub:** [@Muhammad Umar](https://github.com/Umar-Raza)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Email:** umardev92@gmail.com
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# mu-portfolio" 
+## Thank you for visiting! 🚀
